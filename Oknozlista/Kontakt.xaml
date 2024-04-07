@@ -1,0 +1,41 @@
+﻿<Window x:Class="Oknozlista.Kontakt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Oknozlista"
+        mc:Ignorable="d"
+        Title="Formularz" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Imię" FontSize="25" FontWeight="Bold" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="Imie" Grid.Row="0" Grid.Column="1" Margin="10" Height="25" VerticalAlignment="Center" PreviewTextInput="Dane_PreviewTextInput"/>
+
+        <Label Content="Nazwisko" FontSize="25" FontWeight="Bold" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="Nazwisko" Grid.Row="1" Grid.Column="1" Margin="10" Height="25" VerticalAlignment="Center" PreviewTextInput="Dane_PreviewTextInput"/>
+
+        <Label Content="Numer Telefonu" FontSize="25" FontWeight="Bold" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="NumerTelefonu" Grid.Row="2" Grid.Column="1" Margin="10" Height="25" VerticalAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput"/>
+
+        <Label Content="Adres E-mail" FontSize="25" FontWeight="Bold" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="Email" Grid.Row="3" Grid.Column="1" Margin="10" Height="25" VerticalAlignment="Center"/>
+
+        <Label Content="Co chciałbyś/aś nam napisać?" FontSize="25" FontWeight="Bold" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBox x:Name="TwojaOpinia" Grid.Row="4" Grid.Column="1" Margin="10" Height="100" VerticalAlignment="Center"/>
+
+        <Button Height="50" Width="120" Grid.Row="5" Grid.ColumnSpan="2" FontSize="25" FontWeight="Bold" Click="Wyslij_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">Wyślij</Button>
+    </Grid>
+</Window>

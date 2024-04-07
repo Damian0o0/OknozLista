@@ -1,0 +1,30 @@
+﻿<Window x:Class="Oknozlista.DodajOsobe"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Oknozlista"
+        mc:Ignorable="d"
+        Title="Dodaj Osobę" Height="400" Width="500" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBox x:Name="IdMieszkaniaTextBox" Margin="0 0 0 10" Text="Id mieszkania" />
+            <TextBox x:Name="OsiedleTextBox" Margin="0 0 0 10" Text="Osiedle" />
+            <TextBox x:Name="AdresTextBox" Margin="0 0 0 10" Text="Adres" />
+            <CheckBox x:Name="ZGarazemCheckBox" Content="Z garażem" Margin="0 0 0 10"/>
+            <ComboBox x:Name="RodzajComboBox" Width="150" Margin="0 0 0 10">
+                <ComboBox.ItemsSource>
+                    <x:Array Type="{x:Type local:Rodzaj}">
+                        <x:Static Member="local:Rodzaj.rodzinny" />
+                        <x:Static Member="local:Rodzaj.blizniak" />
+                        <x:Static Member="local:Rodzaj.blok" />
+                    </x:Array>
+                </ComboBox.ItemsSource>
+            </ComboBox>
+            <TextBox x:Name="MetrazTextBox" Margin="0 0 0 10" Text="Metraż" />
+            <CheckBox x:Name="DostepnoscCheckBox" Content="Dostępność" Margin="0 0 0 10"/>
+            <TextBox x:Name="OpisTextBox" Margin="0 0 0 10" Text="Opis" />
+            <Button x:Name="DodajButton" Content="Dodaj" Click="Dodaj_Click" HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Window>
